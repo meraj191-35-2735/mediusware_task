@@ -33,12 +33,8 @@ const Problem1 = () => {
   const sortedTasks =
     show === "all"
       ? [
-          ...filteredTasks.filter(
-            (task) => task.status.toLowerCase() === "active"
-          ),
-          ...filteredTasks.filter(
-            (task) => task.status.toLowerCase() !== "active"
-          ),
+          ...filteredTasks.filter((task) => task.status.toLowerCase() === "active"),
+          ...filteredTasks.filter((task) => task.status !== "active"),
         ]
       : filteredTasks;
 
